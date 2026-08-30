@@ -5,51 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Herhenbar Premium</title>
     <style>
-    :root {
-        --bg: #08131b;
-        --panel: #10232b;
-        --gold: #d2a23a;
-        --gold-soft: #e7c46a;
-        --text: #e8f7fb;
-        --muted: #b7cdd0;
-        --line: rgba(210, 162, 58, 0.45);
-    }
-    * { box-sizing: border-box; }
-    body {
-        margin: 0;
-        font-family: Georgia, 'Times New Roman', serif;
-        line-height: 1.7;
-        color: var(--text);
-        background: radial-gradient(circle at top, #10232b 0%, #08131b 55%, #050b10 100%);
-        padding: 28px 18px;
-    }
-    .legal-container {
-        max-width: 900px;
-        margin: 0 auto;
-        background: rgba(16, 35, 43, 0.92);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: clamp(26px, 5vw, 52px);
-        box-shadow: 0 18px 42px rgba(0,0,0,0.28);
-    }
-    .back-link { display: inline-block; color: var(--gold-soft); text-decoration: none; margin-bottom: 24px; font-size: 0.95rem; }
-    .back-link:hover { text-decoration: underline; }
-    h1, h2 { color: var(--gold); line-height: 1.2; letter-spacing: 0.01em; }
-    h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 12px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-    h2 { font-size: clamp(1.25rem, 3vw, 1.7rem); margin-top: 34px; margin-bottom: 10px; }
-    p, li { font-size: 1.05rem; }
-    ul { padding-left: 22px; }
-    .last-updated { color: var(--muted); margin: 12px 0 28px; font-style: italic; }
-    .contact-info { margin-top: 28px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 10px; background: rgba(8, 19, 27, 0.42); }
-    a { color: var(--gold-soft); }
-    .footer-note { margin-top: 38px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+
+:root{
+  --bg:#090706; --bg-soft:#120d09; --panel:#17100b;
+  --gold:#d7a62f; --gold-soft:#f0c454;
+  --cream:#f3ebdd; --muted:#c8bda9;
+  --line:rgba(215,166,47,.42);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Georgia,'Times New Roman',serif;
+  line-height:1.7;
+  color:var(--cream);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(120,72,20,.13),transparent 38%),
+    linear-gradient(180deg,var(--bg-soft) 0%,var(--bg) 48%,#050403 100%);
+  padding:28px 18px;
+}
+.legal-container{
+  max-width:900px;
+  margin:0 auto;
+  background:linear-gradient(180deg,rgba(23,16,11,.96),rgba(10,7,5,.98));
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:clamp(26px,5vw,52px);
+  box-shadow:0 18px 42px rgba(0,0,0,.38);
+}
+.back-link{display:inline-block;color:var(--gold-soft);text-decoration:none;margin-bottom:24px;font-size:.95rem}
+.back-link:hover{text-decoration:underline}
+h1,h2{color:var(--gold);line-height:1.2;letter-spacing:.01em}
+h1{font-size:clamp(2rem,5vw,3rem);margin:0 0 12px;padding-bottom:18px;border-bottom:1px solid var(--line);font-weight:500}
+h2{font-size:clamp(1.25rem,3vw,1.7rem);margin-top:34px;margin-bottom:10px;font-weight:500}
+p,li{font-size:1.05rem}
+ul{padding-left:22px}
+li::marker{color:var(--gold)}
+.last-updated{color:var(--muted);margin:12px 0 28px;font-style:italic}
+.contact-info{
+  margin-top:28px;padding:18px 20px;border:1px solid var(--line);border-radius:10px;
+  background:linear-gradient(145deg,rgba(24,17,12,.95),rgba(11,7,5,.98));
+}
+a{color:var(--gold-soft)}
+.policy-links{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);text-align:center;font-size:.95rem}
+.policy-links a{margin:0 8px;text-decoration:none}
+.policy-links a:hover{text-decoration:underline}
+.footer-note{margin-top:20px;color:var(--muted);font-size:.95rem;text-align:center}
+@media(max-width:600px){
+  body{padding:16px 10px}
+  .legal-container{border-radius:10px;padding:24px 20px}
+  p,li{font-size:1rem}
+  .policy-links a{display:inline-block;margin:5px 7px}
+}
+
 </style>
 </head>
 <body>
     <main class="legal-container">
-        <a href="index.html" class="back-link">← Back to Golden Crunch</a>
+        <a href="index.html" class="back-link">← Back to Brazilian Dessert Obsessions</a>
         <h1>Privacy Policy</h1>
-        <div class="last-updated"><strong>Last updated:</strong> June 1, 2026</div>
+        <div class="last-updated"><strong>Last updated:</strong> August 29, 2026</div>
         
 <p>This Privacy Policy explains how Herhenbar Premium / Armonisse collects, uses, and protects information when you visit our website or purchase our digital products.</p>
 <h2>1. Information We Collect</h2>
@@ -73,11 +87,18 @@
 <h2>10. Updates to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a revised date.</p>
 <h2>11. Contact</h2>
-<div class="contact-info"><p>For privacy questions, contact:</p><p><strong>Email:</strong> <a href="mailto:support@armonisse.com.br">support@armonisse.com.br</a></p><p><strong>Website:</strong> <a href="https://goldencrunch.armonisse.com.br">goldencrunch.armonisse.com.br</a></p></div>
+<div class="contact-info"><p>For privacy questions, contact:</p><p><strong>Email:</strong> <a href="mailto:support@armonisse.com.br">support@armonisse.com.br</a></p><p><strong>Website:</strong> <a href="https://desserts.armonisse.com.br/">desserts.armonisse.com.br</a></p></div>
 
-        <div class="footer-note">
-            Herhenbar Premium · Armonisse · Support: <a href="mailto:support@armonisse.com.br">support@armonisse.com.br</a>
+        <div class="policy-links">
+            <a href="terms-of-use.html">Terms of Use</a> ·
+            <a href="privacy-policy.html">Privacy Policy</a> ·
+            <a href="refund-policy.html">Refund Policy</a>
         </div>
+        <div class="footer-note">
+            Herhenbar Premium · Armonisse · Support:
+            <a href="mailto:support@armonisse.com.br">support@armonisse.com.br</a>
+        </div>
+
     </main>
 </body>
 </html>
