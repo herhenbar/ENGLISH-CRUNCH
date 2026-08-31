@@ -1302,3 +1302,10 @@ hr,
     line-height: 1.2 !important;
   }
 }
+.mobile-hero-cta .cart-icon {
+  display: inline-block;
+  margin-right: 10px;
+  filter: grayscale(1) brightness(0) !important;
+  transform: scaleX(-1) !important;
+  vertical-align: -1px;
+}
