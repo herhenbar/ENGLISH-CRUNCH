@@ -1217,3 +1217,88 @@ hr,
 .mobile-hero-dessert {
   margin-bottom: 18px !important;
 }
+
+/* CART — TODOS OS CTAs */
+.cart-icon {
+  display: inline-block;
+  margin-right: 10px;
+  filter: grayscale(1) brightness(0);
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+/* PRIMEIRO CTA = MOBILE ONLY */
+.mobile-hero-cta {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-hero-cta {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .mobile-hero-cta {
+    display: flex !important;
+    width: calc(100% - 24px) !important;
+    max-width: 360px !important;
+    min-height: 82px !important;
+    margin: 16px auto 22px !important;
+    padding: 12px 18px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .mobile-cta-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .mobile-cta-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.15;
+  }
+
+  .mobile-cta-copy > span {
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .mobile-cta-copy small {
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .mobile-hero-cta .cart-icon {
+    margin: 0 !important;
+    font-size: 21px !important;
+  }
+}
+
+.mobile-hero-cta {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-hero-cta {
+    display: block !important;
+    width: calc(100% - 24px) !important;
+    max-width: 360px !important;
+    margin: 16px auto 22px !important;
+    padding: 18px 20px !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+}
