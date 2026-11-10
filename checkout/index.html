@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Secure Checkout | Armonisse</title>
+
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+
+  <style>
+    body{
+      margin:0;
+      background:#fff;
+      font-family:Arial,sans-serif;
+    }
+    .wrap{
+      max-width:600px;
+      margin:0 auto;
+      padding:20px;
+    }
+    #message{
+      text-align:center;
+      margin:30px 0;
+    }
+    .checkout-container{
+      width:100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div id="message">Loading secure checkout...</div>
+    <div class="checkout-container"></div>
+  </div>
+
+<script>
+const allowedPrices = new Set([
+  "pri_01m5gj1jbm7rhsf75r52tkp16w",
+  "pri_01m5jq6w2wk4b9evvwfvq25xce",
+  "pri_01m5jpygc9tw147ren7b2q84cq",
+  "pri_01m5jq3dkbw6ayk81bqjxwy362",
+  "pri_01m5jqae7cn8m1peybexg0sj71",
+  "pri_01m5j7sekem0dk23m79z8ycbm1",
+  "pri_01m5jqe6ervtsmbv2nsd5rvj3m"
+]);
+
+const params = new URLSearchParams(window.location.search);
+const priceId = params.get("price");
+const message = document.getElementById("message");
+
+if (!priceId || !allowedPrices.has(priceId)) {
+  message.textContent = "Invalid checkout link.";
+} else {
+
+  Paddle.Initialize({
+    token: "live_bcc02f10637482dd1f0c1021927"
+  });
+
+  message.style.display = "none";
+
+  Paddle.Checkout.open({
+    items: [
+      {
+        priceId: priceId,
+        quantity: 1
+      }
+    ],
+    settings: {
+      displayMode: "inline",
+      variant: "express",
+      theme: "light",
+      locale: "en",
+      frameTarget: "checkout-container",
+      frameInitialHeight: 450,
+      frameStyle: "width:100%;min-width:312px;background-color:transparent;border:none;"
+    }
+  });
+}
+</script>
+
+</body>
+</html>
