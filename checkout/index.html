@@ -129,6 +129,16 @@ const params = new URLSearchParams(window.location.search);
 const priceId = params.get("price");
 const product = products[priceId];
 
+  if (priceId === "pri_01m7bmgm6rf0xqyew4rsq37phr") {
+  const logo = document.querySelector(".checkout-logo");
+  const logoWrap = document.querySelector(".logo-wrap");
+  const brand = document.querySelector(".brand");
+
+  if (logo) logo.style.display = "none";
+  if (logoWrap) logoWrap.style.display = "none";
+  if (brand) brand.style.display = "none";
+}
+
 if(!product){
 
   document.getElementById("error").textContent =
