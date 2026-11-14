@@ -150,9 +150,20 @@ if(!product){
   document.getElementById("productName").textContent=product.name;
   document.getElementById("productPrice").textContent=product.price;
 
-  Paddle.Initialize({
-    token:"live_bcc02f10637482dd1f0c1021927"
-  });
+Paddle.Initialize({
+  token: "live_bcc02f10637482dd1f0c1021927",
+
+  eventCallback: function(event) {
+    if (
+      event.name === "checkout.completed" &&
+      event.data?.transaction_id
+    ) {
+      window.location.href =
+        "https://armonisse-fulfillment.henriqueman.workers.dev/download?txn=" +
+        encodeURIComponent(event.data.transaction_id);
+    }
+  }
+});
 
   Paddle.Checkout.open({
 
